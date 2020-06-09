@@ -1,4 +1,4 @@
-
+[![Build status](https://ci.appveyor.com/api/projects/status/efqfauculrrpybqk?svg=true)](https://ci.appveyor.com/project/KateGaw/ra-hoc-time)
 
 https://kategaw.github.io/RA_hoc_time/
 
