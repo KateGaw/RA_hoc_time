@@ -1,15 +1,21 @@
 import React from "react";
 import shortid from "shortid";
-import moment from 'moment';
-import 'moment/locale/ru';
+import moment from "moment";
+import "moment/locale/ru";
 
-function DateTimePretty(props) {
-  const date = moment(props.date).fromNow();
-  function DateTime(props) {
-    return <p className="date">{props.date}</p>;
-  }
-  return DateTime({ date: date });
+function DateTime(props) {
+  return <p className="date">{props.date}</p>;
 }
+
+function withPrettyDate(Component) {
+  function withPrettyDate(props) {
+    const date = moment(props.date).fromNow();
+    return <Component date={date} />;
+  }
+  return withPrettyDate;
+}
+
+const DateTimePretty = withPrettyDate(DateTime);
 
 function Video(props) {
   return (
